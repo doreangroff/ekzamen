@@ -1,0 +1,62 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ekzamen.Windows.AddPlayer"
+        Title="Добавить игрока"
+        Height="700"
+        Width="600"
+        Icon="/Icons/logo.ico">
+    <Grid>
+       <Grid.ColumnDefinitions>
+           <ColumnDefinition Width="150"></ColumnDefinition>
+           <ColumnDefinition></ColumnDefinition>
+       </Grid.ColumnDefinitions>
+       <Grid.RowDefinitions>
+           <RowDefinition></RowDefinition>
+           <RowDefinition></RowDefinition>
+           <RowDefinition></RowDefinition>
+           <RowDefinition></RowDefinition>
+           <RowDefinition></RowDefinition>
+           <RowDefinition></RowDefinition>
+           <RowDefinition></RowDefinition>
+           <RowDefinition></RowDefinition>
+       </Grid.RowDefinitions>
+       
+       <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Имя игрока</TextBlock>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="TBName" Height="10" HorizontalAlignment="Left" Width="100"/>
+       
+       <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">Позицмя</TextBlock>
+       <ComboBox Grid.Row="1" Grid.Column="1" Name="CBPos" Height="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300">
+           <ComboBox.Items>Нападающий</ComboBox.Items>
+           <ComboBox.Items>Защитник</ComboBox.Items>
+           <ComboBox.Items>Либера</ComboBox.Items>
+       </ComboBox>
+       
+       <TextBlock Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">Вес</TextBlock>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="TBWeight" Height="10" HorizontalAlignment="Left" Width="100"/>
+       
+       <TextBlock Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">Рост</TextBlock>
+       <TextBox Grid.Row="3" Grid.Column="1" Name="TBHeight" Height="10" HorizontalAlignment="Left" Width="100"/>
+       
+       <TextBlock Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center">Дата рождения</TextBlock>
+       <CalendarDatePicker Grid.Row="4" Grid.Column="1" Name="BirthDP" HorizontalAlignment="Left" Width="100"></CalendarDatePicker>
+       
+       <TextBlock Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center">Дата начала игры</TextBlock>
+        <CalendarDatePicker Grid.Row="5" Grid.Column="1" Name="StartDP" HorizontalAlignment="Left" Width="100"></CalendarDatePicker>
+        
+        <TextBlock Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center">Команда</TextBlock>
+        <ComboBox Grid.Row="6" Grid.Column="1" Name="CBTeam" Height="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300">
+            <ComboBox.Items>Команда 1</ComboBox.Items>
+            <ComboBox.Items>Команда 2</ComboBox.Items>
+            <ComboBox.Items>Команда 3</ComboBox.Items>
+        </ComboBox>
+       
+       <StackPanel HorizontalAlignment="Center" Grid.Row="7" Grid.ColumnSpan="2" Spacing="10" Orientation="Horizontal">
+           <Button Name="AddButton" Content="Добавить"  Click="AddButton_OnClick"></Button>
+           <Button Name="BackButton" Content="Вернуться" Click="BackButton_OnClick"></Button>
+       </StackPanel>
+       
+   </Grid>
+</Window>

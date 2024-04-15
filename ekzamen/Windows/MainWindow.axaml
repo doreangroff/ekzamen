@@ -1,0 +1,38 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:entities="clr-namespace:ekzamen.Entities"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ekzamen.Windows.MainWindow"
+        Title="SuperVolleyball"
+        WindowStartupLocation="CenterScreen"
+        Height="800"
+        Width="800"
+        Icon="/Icons/logo.ico"
+        x:DataType="entities:Player">
+    <StackPanel Orientation="Vertical" Margin="10 10 0 0">
+        <StackPanel Orientation="Horizontal" Spacing="20">
+            <Button Name="AddBtn" Content="Добавить" Click="AddBtn_OnClick"></Button>
+            <Button Name="DelBtn" Content="Добавить" Click="DelBtn_OnClick"></Button>
+            <TextBox Name="SearchTb" Width="200" TextChanged="SearchTb_OnTextChanged"></TextBox>
+            <ComboBox Name="PosCb" Width="200" SelectionChanged="PosCb_OnSelectionChanged">
+                <ComboBox.Items>Нападающий</ComboBox.Items>
+                <ComboBox.Items>Защитник</ComboBox.Items>
+                <ComboBox.Items>Либера</ComboBox.Items>
+            </ComboBox>
+            <Button Name="CancelBtn" Content="Сброс" Click="CancelBtn_OnClick"></Button>
+        </StackPanel>
+        <DataGrid Name="PlayersGrid" IsReadOnly="True" Margin="10 10 0 0" Height="400">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя игрока" Binding="{Binding PlayerName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Позиция" Binding="{Binding Position}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Вес" Binding="{Binding Weight}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Рост" Binding="{Binding Height}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата рождения" Binding="{Binding Birthday}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата начала игры" Binding="{Binding GameStart}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Команда" Binding="{Binding Team}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
+</Window>
