@@ -13,15 +13,25 @@ namespace ekzamen.Windows;
 public partial class MainWindow : Window
 {
     public ObservableCollection<Player> _players;
-    public MainWindow()
+    private int IsManager;
+    public MainWindow(int isManager)
     {
+        // if (isManager == 0)
+        // {
+        //     DelBtn.IsVisible = true;
+        // }
+        //
+        // if (isManager == 1)
+        // {
+        //     AddBtn.IsVisible = false;
+        // }
         _players = new ObservableCollection<Player>();
         InitializeComponent();
         Player player1 = new Player("Илюха долматов", "Нападающий", 50, 180, Convert.ToDateTime("10/10/2005"),
             Convert.ToDateTime("10/04/2022"), "Команда 1");
         Player player2 = new Player("Игрок 2", "Защитник", 60, 170, Convert.ToDateTime("10/12/2005"), 
             Convert.ToDateTime("10/04/2023"), "Команда 2");
-        Player player3 = new Player("Игрок 2", "Либера", 54, 175, Convert.ToDateTime("16/02/2005"), 
+        Player player3 = new Player("Игрок 3", "Либера", 54, 175, Convert.ToDateTime("16/02/2005"), 
             Convert.ToDateTime("10/04/2024"), "Команда 3");
         _players.Add(player1);
         _players.Add(player2);
@@ -34,13 +44,20 @@ public partial class MainWindow : Window
     private void AddBtn_OnClick(object? sender, RoutedEventArgs e)
     {
         AddPlayer add = new AddPlayer();
+        add.MainPlayerList = _players;
         add.ShowDialog(this);
         add.Closed += delegate { PlayersGrid.ItemsSource = _players; };
     }
 
     private void DelBtn_OnClick(object? sender, RoutedEventArgs e)
     {
-        throw new System.NotImplementedException();
+        var selectedPlayer = PlayersGrid.SelectedItem as Player;
+        if (selectedPlayer is null) return;
+
+        DelWin del = new DelWin(selectedPlayer);
+        del.MainPlayerList = _players;
+        del.ShowDialog(this);
+        del.Closed += delegate { PlayersGrid.ItemsSource = _players; };
     }
 
     private void SearchTb_OnTextChanged(object? sender, TextChangedEventArgs e)

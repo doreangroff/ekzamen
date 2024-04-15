@@ -26,5 +26,8 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [/home/user/RiderProjects/ekzamen/ekzamen/Windows/AutWin.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[/home/user/RiderProjects/ekzamen/ekzamen/Windows/DelWin.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [/home/user/RiderProjects/ekzamen/ekzamen/Windows/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

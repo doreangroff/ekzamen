@@ -7,6 +7,7 @@ namespace ekzamen;
 
 public partial class AutWin : Window
 {
+    private int IsManager;
     public AutWin()
     {
         InitializeComponent();
@@ -16,7 +17,12 @@ public partial class AutWin : Window
 
     private void EnterBut_OnClick(object? sender, RoutedEventArgs e)
     {
-        MainWindow main = new MainWindow();
+        IsManager = RoleCB.SelectedIndex;
+        if (IsManager == -1)
+        {
+            return;
+        }
+        MainWindow main = new MainWindow(IsManager);
         main.Show();
         this.Close();
     }

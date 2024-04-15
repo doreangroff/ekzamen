@@ -25,7 +25,7 @@
        </Grid.RowDefinitions>
        
        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Имя игрока</TextBlock>
-        <TextBox Grid.Row="0" Grid.Column="1" Name="TBName" Height="10" HorizontalAlignment="Left" Width="100"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="TBName" Height="10" HorizontalAlignment="Left" Width="300"/>
        
        <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">Позицмя</TextBlock>
        <ComboBox Grid.Row="1" Grid.Column="1" Name="CBPos" Height="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300">
@@ -35,16 +35,16 @@
        </ComboBox>
        
        <TextBlock Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">Вес</TextBlock>
-        <TextBox Grid.Row="2" Grid.Column="1" Name="TBWeight" Height="10" HorizontalAlignment="Left" Width="100"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="TBWeight" Height="10" HorizontalAlignment="Left" Width="300"/>
        
        <TextBlock Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">Рост</TextBlock>
-       <TextBox Grid.Row="3" Grid.Column="1" Name="TBHeight" Height="10" HorizontalAlignment="Left" Width="100"/>
+       <TextBox Grid.Row="3" Grid.Column="1" Name="TBHeight" Height="10" HorizontalAlignment="Left" Width="300"/>
        
        <TextBlock Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center">Дата рождения</TextBlock>
-       <CalendarDatePicker Grid.Row="4" Grid.Column="1" Name="BirthDP" HorizontalAlignment="Left" Width="100"></CalendarDatePicker>
+       <CalendarDatePicker Grid.Row="4" Grid.Column="1" Name="BirthDP" HorizontalAlignment="Left" Width="300"></CalendarDatePicker>
        
        <TextBlock Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center">Дата начала игры</TextBlock>
-        <CalendarDatePicker Grid.Row="5" Grid.Column="1" Name="StartDP" HorizontalAlignment="Left" Width="100"></CalendarDatePicker>
+        <CalendarDatePicker Grid.Row="5" Grid.Column="1" Name="StartDP" HorizontalAlignment="Left" Width="300"></CalendarDatePicker>
         
         <TextBlock Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center">Команда</TextBlock>
         <ComboBox Grid.Row="6" Grid.Column="1" Name="CBTeam" Height="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300">

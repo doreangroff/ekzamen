@@ -131,3 +131,4 @@
 /home/user/RiderProjects/ekzamen/ekzamen/obj/Debug/net7.0/ekzamen.csproj.CopyComplete
 /home/user/RiderProjects/ekzamen/ekzamen/obj/Debug/net7.0/ekzamen.genruntimeconfig.cache
 /home/user/RiderProjects/ekzamen/ekzamen/obj/Debug/net7.0/ref/ekzamen.dll
+/home/user/RiderProjects/ekzamen/ekzamen/obj/Debug/net7.0/ekzamen.sourcelink.json

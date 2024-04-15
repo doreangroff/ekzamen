@@ -6,6 +6,8 @@
         <entry key="ekzamen/App.axaml" value="ekzamen/ekzamen.csproj" />
         <entry key="ekzamen/MainWindow.axaml" value="ekzamen/ekzamen.csproj" />
         <entry key="ekzamen/Windows/AddPlayer.axaml" value="ekzamen/ekzamen.csproj" />
+        <entry key="ekzamen/Windows/AutWin.axaml" value="ekzamen/ekzamen.csproj" />
+        <entry key="ekzamen/Windows/DelWin.axaml" value="ekzamen/ekzamen.csproj" />
         <entry key="ekzamen/Windows/MainWindow.axaml" value="ekzamen/ekzamen.csproj" />
       </map>
     </option>
